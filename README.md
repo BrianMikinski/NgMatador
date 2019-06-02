@@ -9,6 +9,12 @@ https://material.angular.io/guide/getting-started#step-4-include-a-theme
 ``` console
 ng generate @angular/material:material-nav --name=mainNav2 --module=app.module.ts
 ```
+
+### Create Table (This appears to be improved sytax over the header/sidebar example
+``` console
+ng generate @angular/material:table --name=amorit --module=app.module.ts
+```
+
 ### Good example for configuring a fixed nav bar and side nav bar
 - See the following examples for using **@media queries**, **Angular CDK**, **ngIf** to configure a sidebar
     - main-nav2.component.ts
