@@ -1,7 +1,5 @@
 # ngMatador
-Testing Angular 8 and the Angular Material Library
-
-### This solution has been upgraded from the default Visual Studio Angular 6 templates to Angular 8 with Material 8
+Testing Angular 8 and the Angular Material Library. This solution has been upgraded from the default Visual Studio Angular 6 templates to Angular 8 with Material 8.
 
 ### Be sure to following the material guide to make sure you add the correct themes, iconography, etc
 
