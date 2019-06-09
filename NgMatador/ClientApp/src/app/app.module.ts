@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -14,6 +14,15 @@ import { MainNav2Component } from './main-nav2/main-nav2.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { AmoritComponent } from './amorit/amorit.component'
+
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent, pathMatch: 'full' },
+  { path: 'counter', component: CounterComponent },
+  { path: 'fetch-data', component: FetchDataComponent },
+  { path: 'amorit', component: AmoritComponent },
+];
+
 
 @NgModule({
   declarations: [
@@ -30,12 +39,10 @@ import { AmoritComponent } from './amorit/amorit.component'
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
-      //{ path: 'amorit', component: AmoritComponent}
-    ]),
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,

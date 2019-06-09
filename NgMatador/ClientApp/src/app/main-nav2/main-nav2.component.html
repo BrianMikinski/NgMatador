@@ -10,7 +10,7 @@
       Menu
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerlink="/amorit" href="#">
+      <a mat-list-item routerLink="/amorit" routerLinkActive="active">
         Amoritization Table
       </a>
       <a mat-list-item href="#">
@@ -33,10 +33,12 @@
         </mat-icon>
       </button>
       <span>
-        ngMatador
+        <a routerLink="/" routerLinkActive="active">
+          ngMatador
+        </a>
       </span>
       <span class="spacer"></span>
-      <a href="#" routerlink="/amorit">
+      <a routerLink="/amorit" routerLinkActive="active">
         Amoritization Table
       </a>
       <a href="#">
