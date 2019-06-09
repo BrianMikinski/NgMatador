@@ -21,3 +21,7 @@ ng generate @angular/material:table --name=amorit --module=app.module.ts
     - main-nav2.css
     - main-nav2.html
 - Good example of setting links on the header nav and sidebar navs
+
+
+### Responsive Layouts - Bootstrap 4 vs Angular Flex
+- Apparently there are two different ways in which to do responsive layouts using Angular Material - Bootstrap 4 or the Angular Flex layout package. Angular flex layout is still in beta and appears to be waiting for the release of the Angular Ivy rendering engine before it becomes an RC. For the time being, Bootstrap 4 will be the bets way forward
