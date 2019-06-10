@@ -24,8 +24,15 @@
               "src/assets"
             ],
             "styles": [
+              {
+                // you can include styles here
+                //"input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+                "input": "src/my-theme.scss"
+              },
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
+              //  or here
+              //"input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -145,5 +152,10 @@
       }
     }
   },
-  "defaultProject": "NgMatador"
+  "defaultProject": "NgMatador",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
