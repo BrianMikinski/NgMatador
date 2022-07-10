@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/NgMatador/bin/Debug/netcoreapp2.2/NgMatador.dll",
+            "program": "${workspaceFolder}/NgMatador/bin/Debug/net6.0/NgMatador.dll",
             "args": [],
             "cwd": "${workspaceFolder}/NgMatador",
             "stopAtEntry": false,
