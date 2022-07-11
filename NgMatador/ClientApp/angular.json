@@ -151,7 +151,6 @@
       }
     }
   },
-  "defaultProject": "NgMatador",
   "schematics": {
     "@schematics/angular:component": {
       "styleext": "scss"
