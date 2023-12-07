@@ -39,7 +39,7 @@ const appRoutes: Routes = [
     CounterComponent,
     FetchDataComponent,
     MainNav2Component,
-   /* AmoritComponent*/
+    AmoritComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
