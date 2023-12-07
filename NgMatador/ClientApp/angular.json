@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "NgMatador:build"
+            "buildTarget": "NgMatador:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "NgMatador:build:production"
+              "buildTarget": "NgMatador:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "NgMatador:build"
+            "buildTarget": "NgMatador:build"
           }
         },
         "test": {
