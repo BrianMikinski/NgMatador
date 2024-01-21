@@ -1,6 +1,15 @@
 # NgMatador
+This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+## Updating Angular
+```terminal
+ng update @angular/core@17 @angular/cli@17
+```
+
+## Updating Angular Material
+```terminal
+ng update @angular/material
+```
 
 ## Development server
 
