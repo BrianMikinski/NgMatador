@@ -21,6 +21,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
 import { AmoritComponent } from './amorit/amorit.component';
 import { ProfileComponent } from './profile-modal/profile-modal.component';
 import { ProfileDisplayComponent } from './profile-display/profile-display.component'
@@ -54,7 +55,7 @@ const appRoutes: Routes = [
         ReactiveFormsModule,
         RouterModule.forRoot(
             appRoutes,
-            { enableTracing: true }
+            { enableTracing: false }
         ),
         LayoutModule,
         MatToolbarModule,
@@ -65,7 +66,8 @@ const appRoutes: Routes = [
         MatTableModule,
         MatPaginatorModule,
         MatSortModule,
-        MatDialogModule
+        MatDialogModule,
+        MatInputModule
     ],
     providers: [],
     bootstrap: [AppComponent]

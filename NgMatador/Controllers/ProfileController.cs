@@ -5,10 +5,11 @@ namespace NgMatador.Controllers;
 [Route("api/[controller]")]
 public class ProfileController : Controller
 {
-    private Profile _profile = new Profile()
+    private Profile _profile = new()
     {
         FirstName = "John",
-        LastName = "Doe"
+        LastName = "Doe",
+        Email = "john.doe@example.com"
     };
 
     [HttpGet]
@@ -18,21 +19,18 @@ public class ProfileController : Controller
     }
 
     [HttpPost]
-    public Profile UpdateProfile()
+    public Profile UpdateProfile([FromBody] Profile updatedProfile)
     {
-        _profile = new Profile
-        {
-            FirstName = "Bob",
-            LastName = "Williams"
-        };
-
+        _profile = updatedProfile;
         return _profile;
     }
 }
 
-public class Profile
+public class Profile()
 {
-    public string FirstName { get; init; }
+    public required string FirstName { get; init; }
 
-    public string LastName { get; init; }
+    public required string LastName { get; init; }
+
+    public required string Email { get; init; }
 };
