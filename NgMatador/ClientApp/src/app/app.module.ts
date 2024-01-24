@@ -25,6 +25,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AmoritComponent } from './amorit/amorit.component';
 import { ProfileComponent } from './profile-modal/profile-modal.component';
 import { ProfileDisplayComponent } from './profile-display/profile-display.component'
+import { MatCardModule } from '@angular/material/card';
 
 
 const appRoutes: Routes = [
@@ -67,7 +68,8 @@ const appRoutes: Routes = [
         MatPaginatorModule,
         MatSortModule,
         MatDialogModule,
-        MatInputModule
+        MatInputModule,
+        MatCardModule
     ],
     providers: [],
     bootstrap: [AppComponent]

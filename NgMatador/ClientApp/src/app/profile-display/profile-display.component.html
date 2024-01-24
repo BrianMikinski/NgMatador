@@ -1,6 +1,35 @@
+<mat-card class="example-card mt-3 mb-3">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>
+            Profile
+        </mat-card-title>
+        <mat-card-subtitle>Who is I?</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        @if(profile){
 
-<p> First Name</p>
-{{profile.firstName}}
+        <span>
+            <label>
+                First Name
+            </label>
+            {{profile.firstName}}
+        </span>
+        <br />
+        <span>
+            <label>Last Name</label>
+            {{profile.lastName}}
+        </span>
 
-<p> Last Name</p>
-{{profile.lastName}}
+        }
+        @else{
+        <p>Loading...</p>
+        }
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card>
+

@@ -86,7 +86,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
 
         // or
         this.masterSubscription.unsubscribe();
-
     }
 
     submit() {
