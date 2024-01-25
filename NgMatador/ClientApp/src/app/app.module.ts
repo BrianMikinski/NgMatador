@@ -26,6 +26,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { PeriodicElementsComponent } from './periodic-elements/periodic-elements.component';
 import { ProfileDisplayComponent } from './profile-display/profile-display.component';
 import { ProfileComponent } from './profile-modal/profile-modal.component';
+import { MoviesComponent } from './movies/movies.component';
+import { BooksComponent } from './books/books.component';
+import { AllComponent } from './all/all.component';
 
 
 const appRoutes: Routes = [
@@ -33,6 +36,9 @@ const appRoutes: Routes = [
     { path: 'counter', component: CounterComponent },
     { path: 'fetch-data', component: FetchDataComponent },
     { path: 'periodic-elements', component: PeriodicElementsComponent },
+    { path: 'movies', component: MoviesComponent },
+    { path: 'books', component: BooksComponent }, // user a route resolver
+    { path: 'all', component: AllComponent },
 ];
 
 
@@ -46,7 +52,10 @@ const appRoutes: Routes = [
         MainNav2Component,
         PeriodicElementsComponent,
         ProfileComponent,
-        ProfileDisplayComponent
+        ProfileDisplayComponent,
+        MoviesComponent,
+        BooksComponent,
+        AllComponent
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
