@@ -5,13 +5,13 @@ import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
-export interface AmoritItem {
+export interface PeriodicElement {
   name: string;
   id: number;
 }
 
 // TODO: replace this with real data from your application
-const EXAMPLE_DATA: AmoritItem[] = [
+const EXAMPLE_DATA: PeriodicElement[] = [
   {id: 1, name: 'Hydrogen'},
   {id: 2, name: 'Helium'},
   {id: 3, name: 'Lithium'},
@@ -39,8 +39,8 @@ const EXAMPLE_DATA: AmoritItem[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class AmoritDataSource extends DataSource<AmoritItem> {
-  data: AmoritItem[] = EXAMPLE_DATA;
+export class AmoritDataSource extends DataSource<PeriodicElement> {
+  data: PeriodicElement[] = EXAMPLE_DATA;
   paginator: MatPaginator;
   sort: MatSort;
 
@@ -53,7 +53,7 @@ export class AmoritDataSource extends DataSource<AmoritItem> {
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<AmoritItem[]> {
+  connect(): Observable<PeriodicElement[]> {
     // Combine everything that affects the rendered data into one update
     // stream for the data-table to consume.
     const dataMutations = [
@@ -77,7 +77,7 @@ export class AmoritDataSource extends DataSource<AmoritItem> {
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: AmoritItem[]) {
+  private getPagedData(data: PeriodicElement[]) {
     const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
     return data.splice(startIndex, this.paginator.pageSize);
   }
@@ -86,7 +86,7 @@ export class AmoritDataSource extends DataSource<AmoritItem> {
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: AmoritItem[]) {
+  private getSortedData(data: PeriodicElement[]) {
     if (!this.sort.active || this.sort.direction === '') {
       return data;
     }

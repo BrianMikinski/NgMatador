@@ -4,15 +4,15 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
-import { AmoritComponent } from './amorit.component';
+import { PeriodicElementsComponent } from './periodic-elements.component';
 
 describe('AmoritComponent', () => {
-  let component: AmoritComponent;
-  let fixture: ComponentFixture<AmoritComponent>;
+  let component: PeriodicElementsComponent;
+  let fixture: ComponentFixture<PeriodicElementsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AmoritComponent ],
+      declarations: [ PeriodicElementsComponent ],
       imports: [
         NoopAnimationsModule,
         MatPaginatorModule,
@@ -23,7 +23,7 @@ describe('AmoritComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AmoritComponent);
+    fixture = TestBed.createComponent(PeriodicElementsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

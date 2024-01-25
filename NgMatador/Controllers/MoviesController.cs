@@ -1,15 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NgMatador.Models;
 using System.Collections.Generic;
 
 namespace NgMatador.Controllers;
-
-public record Movie
-{
-    public string Name { get; init; }
-
-    public string Description { get; init; }
-}
-
 
 [Route("api/[controller]")]
 public class MoviesController : Controller
@@ -32,6 +25,21 @@ public class MoviesController : Controller
             {
                 Name = "Sicario",
                 Description = "Gangs in mexico"
+            },
+            new Movie
+            {
+                Name = "Once up a time in the west",
+                Description = "A strange shows up to town to fight!"
+            },
+            new Movie
+            {
+                Name = "O Brother Where Art Thou",
+                Description = "Odysseus"
+            },
+            new Movie
+            {
+                Name = "Batman",
+                Description ="The Dark Knight fights evil!"
             }
         ];
     }

@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using NgMatador.Models;
 
 namespace NgMatador.Controllers;
 
@@ -25,12 +26,3 @@ public class ProfileController : Controller
         return _profile;
     }
 }
-
-public class Profile()
-{
-    public required string FirstName { get; init; }
-
-    public required string LastName { get; init; }
-
-    public required string Email { get; init; }
-};

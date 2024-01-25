@@ -1,14 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using NgMatador.Models;
 using System.Collections.Generic;
 
 namespace NgMatador.Controllers;
-
-public record Book
-{
-    public string Title { get; init; }
-
-    public string Author { get; init; }
-}
 
 [Route("api/[controller]")]
 public class BooksController : Controller
@@ -16,6 +10,26 @@ public class BooksController : Controller
     [HttpGet]
     public IEnumerable<Book> Index()
     {
-        return [];
+        return [new Book
+        {
+            Title = "Meditations",
+            Author = "Marcus Aurelius"
+        },
+            new Book
+            {
+                Title = "Republic",
+                Author = "Plato"
+            },
+            new Book
+            {
+                Title = "On Liberty",
+                Author = "John Stuart Mill"
+            },
+            new Book
+            {
+                Title = "Meditations on First Philosphy",
+                Author = "Rene Descartes"
+            }
+        ];
     }
 }
