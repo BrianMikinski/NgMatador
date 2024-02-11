@@ -1,0 +1,47 @@
+<div class="profile-dialog">
+    <h2 mat-dialog-title>Profile</h2>
+    <mat-dialog-content class="mat-typography profile-dialog" *ngIf="profile$ | async as profile else loading">
+        <form [formGroup]="profileForm" (ngSubmit)="submit()">
+            <mat-form-field class="form-field mt-2" appearance="outline">
+                <mat-label>
+                    First Name
+                </mat-label>
+                <input matInput formControlName="firstName" type="text">
+                <mat-error *ngIf="profileForm.controls.firstName.touched && profileForm.controls.firstName.invalid">
+                    <span *ngIf="profileForm.controls.firstName.errors.required">This field is mandatory.</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>
+                    Last Name
+                </mat-label>
+                <input matInput formControlName="lastName" type="text">
+                <mat-error *ngIf="profileForm.controls.lastName.touched && profileForm.controls.lastName.invalid">
+                    <span *ngIf="profileForm.controls.lastName.errors.required">This field is mandatory.</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-field" appearance="outline">
+                <mat-label>
+                    E-mail
+                </mat-label>
+                <input matInput formControlName="email" required>
+                <mat-error *ngIf="profileForm.controls.email.touched && profileForm.controls.email.invalid">
+                    <span *ngIf="profileForm.controls.email.errors.required">This field is mandatory.</span>
+                    <span *ngIf="profileForm.controls.email.errors.pattern">This field is invalid.</span>
+                </mat-error>
+            </mat-form-field>
+        </form>
+    </mat-dialog-content>
+    <ng-template #loading>
+        <mat-spinner></mat-spinner>
+    </ng-template>
+    <mat-dialog-actions align="end">
+        <button mat-raised-button type="submit" [disabled]="!profileForm.valid" [mat-dialog-close]="true" color="primary" *ngIf="profile$ | async as profile" (click)="submit(profile)">
+            Update Profile
+        </button>
+        <button mat-raised-button [mat-dialog-close]="true" color="accent">
+            Close
+        </button>
+    </mat-dialog-actions>
+</div>
+

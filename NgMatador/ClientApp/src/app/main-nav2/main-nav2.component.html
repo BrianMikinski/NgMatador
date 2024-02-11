@@ -1,58 +1,65 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer
-               class="sidenav"
-               fixedInViewport
-            
-               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'"
-               [opened]="(isHandset$ | async) === false">
-    <mat-toolbar>
-      ngMatador
-    </mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item routerLink="/amorit" routerLinkActive="active">
-        Amoritization Table
-      </a>
-      <a mat-list-item href="#">
-        Theoretical Investment Returns
-      </a>
-      <a mat-list-item href="#">
-        Other
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <button type="button"
-              aria-label="Toggle sidenav"
-              mat-icon-button
-              (click)="drawer.toggle()"
-              *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">
-          menu
-        </mat-icon>
-      </button>
-      <span>
-        <a routerLink="/" routerLinkActive="active">
-          ngMatador
-        </a>
-      </span>
-      <span class="spacer"></span>
-      <a routerLink="/amorit" routerLinkActive="active">
-        Properties
-      </a>
-      <a routerLink="/amorit" routerLinkActive="active">
-        Map
-      </a>
-      <a href="#">
-        Glossary
-      </a>
-      <a href="#">
-        My Account
-      </a>
-    </mat-toolbar>
-    <ng-content>
-      <!--This is where our router places our content or where the router routes our content-->
-    </ng-content>
-  </mat-sidenav-content>
+    <mat-sidenav #drawer
+                 class="sidenav"
+                 fixedInViewport
+                 [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                 [mode]="(isHandset$ | async) ? 'over' : 'side'"
+                 [opened]="(isHandset$ | async) === false">
+        <mat-toolbar>
+            ngMatador
+        </mat-toolbar>
+        <mat-nav-list>
+            <a mat-list-item routerLink="/periodic-elements" routerLinkActive="active">
+                Periodic Elements
+            </a>
+            <a mat-list-item href="#">
+                Theoretical Investment Returns
+            </a>
+            <a mat-list-item href="#">
+                Other
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <button type="button"
+                    aria-label="Toggle sidenav"
+                    mat-icon-button
+                    (click)="drawer.toggle()"
+                    *ngIf="isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">
+                    menu
+                </mat-icon>
+            </button>
+            <span>
+                <a routerLink="/" routerLinkActive="active">
+                    ngMatador
+                </a>
+            </span>
+            <span class="spacer"></span>
+            <a routerLink="/periodic-elements" routerLinkActive="active">
+                Periodic Elements
+            </a>
+            <a routerLink="/movies" routerLinkActive="active">
+                Movies
+            </a>
+            <a routerLink="/books" routerLinkActive="active">
+                Books
+            </a>
+            <a routerLink="/all" routerLinkActive="active">
+                All
+            </a>
+            <a href="#">
+                Glossary
+            </a>
+            <button mat-raised-button
+                    aria-label="Show Profile"
+                    (click)="showProfileDialog()">
+                My Profile
+            </button>
+        </mat-toolbar>
+        <ng-content>
+            <!--This is where our router places our content or where the router routes our content-->
+        </ng-content>
+    </mat-sidenav-content>
 </mat-sidenav-container>
